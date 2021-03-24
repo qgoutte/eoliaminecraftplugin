@@ -1,0 +1,8 @@
+name: EoliaPlugin
+version: 0.1.0
+main: fr.kyristepiu.eoliaminecraftplugin.EoliaPlugin
+commands:
+  test:
+    description: Test a minecraft command to have a stack of dirt
+    usage: /<command>
+    permission: eoliaminecraftplugin.test
