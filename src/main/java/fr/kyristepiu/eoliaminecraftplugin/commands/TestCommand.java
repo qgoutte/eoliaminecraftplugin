@@ -21,6 +21,7 @@ public class TestCommand implements CommandExecutor {
             return true;
         }
         else {
+            sender.sendMessage(ChatColor.RED+"Tu ne peux pas utiliser cette commande");
             return false;
         }
 
