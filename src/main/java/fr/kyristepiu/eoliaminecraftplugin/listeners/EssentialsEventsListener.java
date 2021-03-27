@@ -20,14 +20,6 @@ public class EssentialsEventsListener implements Listener {
 
     public static  Essentials ess;
 
-
-    //TODO: Move this function to NativeSpigotEventsListener
-    @EventHandler
-    public void onItemBreak(PlayerItemBreakEvent event){
-        //TODO: Find how to have the name of the item in the good language
-        event.getPlayer().sendMessage(ChatColor.DARK_AQUA+ "Ton "+ event.getBrokenItem().getType().name() +" est cassé :(");
-    }
-
     @EventHandler
     public void onHarvest (PlayerHarvestBlockEvent event) throws MaxMoneyException {
         //TODO: Add Essentials API to add money to a player with the farmer job

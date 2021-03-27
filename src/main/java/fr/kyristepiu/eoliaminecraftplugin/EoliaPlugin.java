@@ -2,12 +2,14 @@ package fr.kyristepiu.eoliaminecraftplugin;
 
 import fr.kyristepiu.eoliaminecraftplugin.commands.TestCommand;
 import fr.kyristepiu.eoliaminecraftplugin.listeners.EssentialsEventsListener;
+import fr.kyristepiu.eoliaminecraftplugin.listeners.EventsListener;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public class EoliaPlugin extends JavaPlugin {
     @Override
     public void onEnable(){
         getLogger().info("EoliaPlugin wake up");
+        getServer().getPluginManager().registerEvents(new EventsListener(), this);
         if (getServer().getPluginManager().isPluginEnabled("Essentials")){
             getServer().getPluginManager().registerEvents(new EssentialsEventsListener(), this);
         }
