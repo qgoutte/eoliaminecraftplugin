@@ -22,7 +22,6 @@ public class EssentialsEventsListener implements Listener {
 
     @EventHandler
     public void onHarvest (PlayerHarvestBlockEvent event) throws MaxMoneyException {
-        //TODO: Add Essentials API to add money to a player with the farmer job
         ess = (Essentials) Essentials.getProvidingPlugin(Essentials.class);
         //TODO: Search the player group (job) to chose the function to launch and to give money to a farmer
         //Get Player in Essential format
