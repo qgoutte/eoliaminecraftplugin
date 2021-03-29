@@ -1,7 +1,7 @@
 name: EoliaPlugin
 version: 0.1.0
 main: fr.kyristepiu.eoliaminecraftplugin.EoliaPlugin
-depend: [Essentials]
+depend: [Vault]
 commands:
   test:
     description: Test a minecraft command to have a stack of dirt
