@@ -2,11 +2,15 @@ package fr.kyristepiu.eoliaminecraftplugin.listeners;
 
 import fr.kyristepiu.eoliaminecraftplugin.EoliaPlugin;
 import net.milkbowl.vault.economy.EconomyResponse;
+import net.milkbowl.vault.permission.Permission;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.block.BlockBreakEvent;
 import org.bukkit.event.player.PlayerHarvestBlockEvent;
+
+import java.util.Arrays;
+import java.util.function.Predicate;
 import java.util.logging.Logger;
 
 public class VaultEventsListener implements Listener {
@@ -16,9 +20,13 @@ public class VaultEventsListener implements Listener {
     @EventHandler
     public void onHarvest (PlayerHarvestBlockEvent event) {
         Player player = event.getPlayer();
-        //TODO : control if the player is farmer
+        //TODO : control if the player is farmer extract
+        //Permission perm = EoliaPlugin.getPermissions();
+        //String[] pgroups = perm.getPlayerGroups(player);
+
+
         EconomyResponse economyResponse = EoliaPlugin.getEconomy().depositPlayer(player,0.02);
-        if (!economyResponse.transactionSuccess()){
+        if (!economyResponse.transactionSuccess()) {
             log.info("An error occured :" + economyResponse.errorMessage);
         }
     }
